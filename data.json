@@ -1,0 +1,40 @@
+// 每本电子书的元数据都以对象的形式存储，包含了书名、作者、出版社、出版年份、ISBN、语言、类别和文件路径等信息。可以根据需要添加或修改字段！
+
+[
+    {
+        "title": "原则",
+        "author": "【美】瑞·达利欧",
+        "publisher": "中信出版集团",
+        "year": null,
+        "isbn": "9787508684031",
+        "language": "中文",
+        "genre": "经济",
+        "file_path": "/path/to/ebook1.epub"
+    },
+    {
+        "title": "国富论",
+        "author": "[英]亚当·斯密",
+        "genre": "经济",
+        "file_path": "/lib/pdf/web/viewer.html?file=https://raw.githubusercontent.com/qqhsx/book/main/经济/国富论：亚当斯密.pdf"
+    },
+    {
+        "title": "经济学的思维方式（套装共2册）",
+        "author": "托马斯·索维尔",
+        "genre": "经济",
+        "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/经济/经济学的思维方式（套装共2册）.epub"
+    }
+    {
+        "title": "经济学的思维方式（原书第13版）",
+        "author": "（美）海恩（Heyne,P.） & （美）勃特克（Boettke,P.） & （美）普雷契特科（Prychitko,D.） 著",
+        "genre": "经济",
+        "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/经济/经济学的思维方式（原书第13版）.epub"
+    }
+	{
+        "title": "历史是个什么玩意儿",
+        "author": "袁腾飞",
+        "genre": "历史",
+        "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/历史/历史是个什么玩意儿（全集）.epub"
+    }
+
+]
+
