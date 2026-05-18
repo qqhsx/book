@@ -1,31 +1,19 @@
 ### 本仓库目录结构规范
 
-qqhsx/book (仓库根目录)
-├── .github/
-
-│   └── workflows/
-
-│       └── auto_update.yml       # GitHub Actions 自动化工作流配置文件
-
-├── books/                        # 电子书源文件存放处（不按分类建子文件夹）
-
-│   ├── 经济学原理.pdf
-
-│   └── 动物农场.epub
-
-├── covers/                       # 书籍封面图片存放处
-
-│   ├── 经济学原理.jpg
-
-│   └── 动物农场.jpg
-
-├── .gitignore                    # 忽略临时文件（如 Python 缓存）
-
-├── README.md                     # 仓库说明文档
-
-├── data.json                     # 自动生成的数据库文件（Hexo 读取它）
-
-└── update_books.py               # 核心自动化 Python 脚本
+qqhsx/book (仓库根目录)  
+├── .github/  
+│   └── workflows/  
+│       └── auto_update.yml       # GitHub Actions 自动化工作流配置文件  
+├── books/                        # 电子书源文件存放处（不按分类建子文件夹）  
+│   ├── 经济学原理.pdf  
+│   └── 动物农场.epub  
+├── covers/                       # 书籍封面图片存放处  
+│   ├── 经济学原理.jpg  
+│   └── 动物农场.jpg  
+├── .gitignore                    # 忽略临时文件（如 Python 缓存）  
+├── README.md                     # 仓库说明文档  
+├── data.json                     # 自动生成的数据库文件（Hexo 读取它）  
+└── update_books.py               # 核心自动化 Python 脚本  
 
 
 
