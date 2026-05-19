@@ -35,7 +35,7 @@ qqhsx/book (仓库根目录)
    3. 最后再走“传书三部曲”  
   git add . 
   
-    git commit -m "加书/改代码描述" 
+    git commit -m "upload new book" 
   
     git push origin main
   
