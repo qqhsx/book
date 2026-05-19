@@ -25,16 +25,22 @@ qqhsx/book (仓库根目录)
 
 - **示例**：`[经济]亚当·斯密-国富论.pdf`
 
--  1. 把新放入的书籍和图片登记到暂存区  
-  git add .
-
-   2. 给这次上传打个标记（双引号里的字可以随便改，比如“添加新书”）  
-  git commit -m "upload new book"
-
-   3. 推送到云端（这次就会看到百分比进度条了！）  
-  git push origin main
-
+-  1. 每次本地操作前的“黄金第一步”  
+  
+  git pull origin main
+  
+   2. 然后在本地开心地加书、改名、改代码...  
+  
+  
+   3. 最后再走“传书三部曲”  
+  git add . 
+  
+    git commit -m "加书/改代码描述" 
+  
+    git push origin main
+  
 - **脚本解析逻辑**：Python 脚本看到这个文件名，会自动切片：
+  
   - 中括号里的是 `genre`（经济）
   - 横杠前面的是 `author`（亚当·斯密）
   - 横杠后面的是 `title`（国富论）
