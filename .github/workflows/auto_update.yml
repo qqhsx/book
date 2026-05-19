@@ -1,0 +1,44 @@
+name: Auto Update Book Data
+
+on:
+  push:
+    branches:
+      - main # 只有当 main 分支有代码推送时才触发
+    paths:
+      - 'books/**' # 只有当 books 文件夹内的书籍有变动（新增、修改、删除）时才触发执行
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取仓库代码到 GitHub 虚拟服务器
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true # 保持登录凭证，允许后续把修改推回仓库
+
+      # 2. 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 3. 运行你的升级版 Python 脚本
+      - name: Run Update Script
+        run: python update_books.py
+
+      # 4. 检查 data.json 是否有变化，如果有，自动提交并推回仓库
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          
+          # 检查是否有文件改动
+          if [ -n "$(git status --porcelain data.json)" ]; then
+            git add data.json
+            git commit -m "🤖 [Bot] 自动同步与清洗 data.json"
+            git push origin main
+          else
+            echo "😎 data.json 没有发生变动，无需提交。"
+          fi
