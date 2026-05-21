@@ -58,5 +58,17 @@
         "author": "加西亚·马尔克斯",
         "genre": "文学",
         "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/books/%5B%E6%96%87%E5%AD%A6%5D%E7%99%BE%E5%B9%B4%E5%AD%A4%E7%8B%AC-%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF.epub"
+    },
+    {
+        "title": "悲惨世界(全3册)",
+        "author": "雨果",
+        "genre": "文学",
+        "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/books/%5B%E6%96%87%E5%AD%A6%5D%E6%82%B2%E6%83%A8%E4%B8%96%E7%95%8C%28%E5%85%A83%E5%86%8C%29-%E9%9B%A8%E6%9E%9C.epub"
+    },
+    {
+        "title": "活着",
+        "author": "余华",
+        "genre": "文学",
+        "file_path": "/lib/epub/index.html?file=https://raw.githubusercontent.com/qqhsx/book/main/books/%5B%E6%96%87%E5%AD%A6%5D%E6%B4%BB%E7%9D%80-%E4%BD%99%E5%8D%8E.epub"
     }
 ]
