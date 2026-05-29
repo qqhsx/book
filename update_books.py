@@ -5,19 +5,24 @@ from urllib.parse import quote
 
 def parse_filename(filename):
     """
-    升级版解析：完美兼容作者名字中带有点（. 或 ·）的情况
+    高级升级版解析：完美兼容书名中带破折号（—）或多短横线（-）的情况
     匹配格式: [分类]书名-作者.扩展名
     """
-    # 1. 先安全地剥离文件后缀名（无论前面有多少个点，os.path.splitext 都能精准拿到真正的后缀）
+    # 1. 先安全地剥离文件后缀名
     name_without_ext, ext = os.path.splitext(filename)
     
     # 2. 用正则表达式只解析去掉后缀后的干净名称
-    # 这里的 $ 确保了匹配到字符串的末尾，横杠后面的内容全部归为作者
-    match = re.match(r'^\[(.*?)\](.*?)[\-—](.*?)$', name_without_ext)
+    # 💡 关键改动：书名部分改用 (.*) 贪婪匹配，[—\-]+ 匹配一个或多个连续的横杠/破折号
+    # 这样就算书名中间有破折号，它也会坚决匹配到【最后一个】横杠，从而把真正的作者剥离出来
+    match = re.match(r'^\[(.*?)\](.*)[—\-]+(.*?)$', name_without_ext)
     if match:
         genre = match.group(1).strip()
         title = match.group(2).strip()
         author = match.group(3).strip()
+        
+        # 💡 防错机制：防止书名尾部有残余的破折号
+        title = title.rstrip('—-').strip()
+        
         return genre, title, author
     else:
         return "未分类", name_without_ext, "未知作者"
